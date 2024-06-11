@@ -6,7 +6,7 @@ export const Navbar = () => {
         
         <div className="flex flex-col justify-center">
           <a href="" className="flex justify-center">
-            <img src="./assets/icon.png" alt="shopaholic"/>
+            <img src="../images/website_logo.jpg" alt="asdasd"/>
           </a>
         </div>
 
