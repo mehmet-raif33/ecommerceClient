@@ -1,29 +1,9 @@
-import { Navbar } from "../components/Navbar"
-import { Footer } from "../components/Footer"
 import { useState } from "react"
 import { useSelector , useDispatch } from "react-redux"
 import { RootState } from "../redux/Store"
 import { addTodo, removeTodo } from '../redux/ToDoList/ToDoListSlice'
 import { Todo } from "../redux/ToDoList/ToDoListSlice"
 import { AnimatePresence , motion } from "framer-motion"
-
-const container = {
-  hidden: {
-
-  },
-  visible: {
-
-  }
-}
-
-const item = {
-  hidden: {
-
-  },
-  visible: {
-    
-  }
-}
 
 export const MainLayer = () => {
   
@@ -36,7 +16,7 @@ export const MainLayer = () => {
   console.log(myData)
   return (
     <div className="bg-sky-200">
-        <Navbar />
+        
         <div className="h-[800px]">
           <div className="p-3 bg-stone-200 flex justify-center">
             <input
@@ -90,7 +70,6 @@ export const MainLayer = () => {
             
           </div>
         </div>
-        <Footer />
     </div>
   )
 }
