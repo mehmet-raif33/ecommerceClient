@@ -7,24 +7,6 @@ import { addTodo, removeTodo } from '../redux/ToDoList/ToDoListSlice'
 import { Todo } from "../redux/ToDoList/ToDoListSlice"
 import { AnimatePresence , motion } from "framer-motion"
 
-const container = {
-  hidden: {
-
-  },
-  visible: {
-
-  }
-}
-
-const item = {
-  hidden: {
-
-  },
-  visible: {
-    
-  }
-}
-
 export const MainLayer = () => {
   
 
