@@ -18,6 +18,9 @@ export const MainLayer = () => {
     <div className="bg-sky-200">
         
         <div className="h-[800px]">
+          <h2>
+            Selammmm
+          </h2>
           <div className="p-3 bg-stone-200 flex justify-center">
             <input
             onChange={(e) => {
