@@ -7,7 +7,7 @@ export const Navbar = () => {
         <div className="flex flex-col justify-center">
           <a href="/" className="flex justify-center">
             <img 
-            src="public/images/website_logo.jpg" 
+            src="images/website_logo.jpg" 
             alt="asdasd"
             className="w-[250px]"
             />
