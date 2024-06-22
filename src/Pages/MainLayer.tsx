@@ -13,7 +13,6 @@ export const MainLayer = () => {
 
   const myData = useSelector( (state: RootState) => state.todos.todos)
   
-  console.log(myData)
   return (
     <div className="bg-sky-200">
         
@@ -39,7 +38,7 @@ export const MainLayer = () => {
             </button>
           </div>
           <div
-          className="flex flex-col bg-sky-500 p-5 text-white text-lg"
+          className="flex flex-col bg-sky-500 p-5 text-white text-lg  lg:px-52 md:px-28 "
           >
             <AnimatePresence >
               {
@@ -48,7 +47,7 @@ export const MainLayer = () => {
                   initial={{ opacity: 0, x:-50 }}
                   animate={{ opacity: 1, x:0 }}
                   exit={{ opacity: 0, x: 50 }} 
-                  className="mb-5 flex flex-row justify-between" 
+                  className="mb-5 flex flex-row justify-between bg-yellow-300 p-3 rounded-md " 
                   key={a.id}>
 
                     <h2 className="bg-slate-200 p-3 text-black rounded-lg">
@@ -56,7 +55,7 @@ export const MainLayer = () => {
                     </h2>
 
                     <button
-                      className="ml-2 bg-red-500 p-1 rounded"
+                      className="ml-2 bg-red-500 p-1 rounded px-10"
                       onClick={() => dispatch(removeTodo(a.id))}
                     >
                       Delete
