@@ -27,7 +27,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <Provider store={store}>
     <Navbar />
-    <RouterProvider router={router}/>
+      <RouterProvider router={router}/>
     <Footer />
   </Provider>,
 )
