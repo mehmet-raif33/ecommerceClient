@@ -12,7 +12,7 @@ const Home = () => {
       </div>
       <div className="grid col-span-2">
         <h1>
-          KSJDSALK
+          KSJDSALKsad
         </h1>
       </div>
 
