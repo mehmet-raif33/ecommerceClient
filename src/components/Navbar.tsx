@@ -15,7 +15,7 @@ export const Navbar = () => {
         </div>
 
         <div className="">
-          <ul className="flex flex-row m-3 w-[100%]">
+          <ul className="flex flex-row m-4 w-[100%]">
             <li className="mr-3">
               <a href="/home" >
                 <img width="40" height="40" src="https://img.icons8.com/offices/30/home.png" alt="home"/>
