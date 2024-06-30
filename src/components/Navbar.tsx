@@ -1,5 +1,10 @@
+import { useSelector } from "react-redux"
+import { RootState } from "../redux/Store"
 
 export const Navbar = () => {
+
+  const isUsersHere = useSelector((state :RootState) => state.userData.isHere)
+
   return (
     <div className="sticky top-0 bg-slate-50 h-[80px] w-[100%] flex justify-center">
       <div className="bg-slate-50 h-[80px] w-[80%] flex justify-between">
@@ -22,9 +27,18 @@ export const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="/profile" >
-                <img width="40" height="40" src="https://img.icons8.com/fluency/96/name--v1.png" alt="home"/>
-              </a>
+              {
+                isUsersHere ?  
+                <a href="/settings" >
+                  <img width="44" height="40" src="/images/icons8-settings-90.png" alt="home"/>
+                </a>
+                :    
+                <a href="/profile" >
+                  <img width="40" height="40" src="https://img.icons8.com/fluency/96/name--v1.png" alt="home"/>
+                </a>
+              }
+              
+
             </li>
           </ul>
         </div>

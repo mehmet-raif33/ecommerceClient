@@ -1,5 +1,7 @@
 
 const Home = () => {
+
+
   return (
     <div className="grid grid-cols-12">
       <div className="grid col-span-7 bg-slate-50 p-1">
@@ -19,7 +21,8 @@ const Home = () => {
             This video contains very bloody contents! If you have any health problem, you must leave this page and never come back! We are not take a responsibilities that can be happen!
           </p>          
         </div>
-
+        
+        
       </div>
 
     </div>
