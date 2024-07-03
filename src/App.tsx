@@ -1,11 +1,11 @@
 import './App.css'
-import { MainLayer } from './Pages/MainLayer'
-function App() {
+import MainLayout from './Layout/MainLayout'
 
+function App() {
 
   return (
     <>
-      <MainLayer />
+      <MainLayout />
     </>
   )
 
