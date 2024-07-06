@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import MainLayout from "../Layout/MainLayout"
 import Homepage from "../Pages/Homepage";
 import Chat from "../Pages/Chat";
 import LiveFlow from "../Pages/LiveFlow";
@@ -7,32 +8,38 @@ import Profile from "../Pages/Profile";
 import { Settings } from "../Pages/Profile/Settings";
 
 const MainRouter = createBrowserRouter([
-    {
-        path:'/',
+  {
+    path: '/',
+    element: <MainLayout />, // MainLayout as the layout
+    children: [
+      {
+        path: 'homepage',
         element: <Homepage />
-    },
-    {
-        path:'/chat',
+      },
+      {
+        path: 'chat',
         element: <Chat />
-    },
-    {
-        path:'/liveflow',
+      },
+      {
+        path: 'liveflow',
         element: <LiveFlow />
-    },
-    {
-        path:'/post',
+      },
+      {
+        path: 'post',
         element: <Post />
-    },
-    {
-        path:'/profile',
+      },
+      {
+        path: 'profile',
         element: <Profile />,
         children: [
-            {
-                path: '/profile/settings',
-                element: <Settings />
-            }
+          {
+            path: 'settings',
+            element: <Settings />
+          }
         ]
-    }
-])
+      }
+    ]
+  }
+]);
 
 export default MainRouter;
