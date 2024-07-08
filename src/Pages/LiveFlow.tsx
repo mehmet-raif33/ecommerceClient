@@ -1,6 +1,8 @@
 const LiveFlow = () => {
   return (
-    <div>LiveFlow</div>
+    <div className="h-[800px] bg-yellow-300">
+      LiveFlow
+    </div>
   )
 }
 

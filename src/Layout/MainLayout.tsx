@@ -1,20 +1,25 @@
 import { Navbar } from "../components/Navbar";
 import { Outlet } from "react-router-dom";
 import { Footer } from "../components/Footer";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence , motion } from "framer-motion";
 
 const MainLayout = () => {
 
+  
   return (
     <div>
       <Navbar />
-      <AnimatePresence mode="wait">
+
         <div className="flex justify-center bg-slate-300">
-          <div className="w-[80%]">
-            <Outlet /> 
-          </div>
+          
+          <AnimatePresence mode="wait">
+            <motion.div
+            className="w-[80%]"
+            >
+              <Outlet /> 
+            </motion.div>
+          </AnimatePresence>
         </div>
-      </AnimatePresence>
       
       <Footer />
     </div>

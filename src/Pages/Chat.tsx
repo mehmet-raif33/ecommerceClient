@@ -1,6 +1,8 @@
 const Chat = () => {
   return (
-    <div>Chat</div>
+    <div className="h-[800px] bg-white">
+      THIS IS CHAT AREA!!
+    </div>
   )
 }
 

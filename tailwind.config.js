@@ -11,6 +11,10 @@ export default {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      backgroundImage: {
+        'home': "url('./src/assets/images/HomeIcon.png')",
+        'homeIsClicked': "url('./src/assets/images/HomeIconIsClicked.png')",
+      }
     },
   },
   plugins: [],
