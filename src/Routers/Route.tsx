@@ -5,20 +5,21 @@ import Chat from "../Pages/Chat";
 import LiveFlow from "../Pages/LiveFlow";
 import Post from "../Pages/Post";
 import Profile from "../Pages/Profile";
-import {Settings} from "../Pages/Profile/Settings";
-import {AuthPage} from "../Pages/AuthPage";
-import {About} from "../components/About";
-import {Posts} from "../components/Posts";
-import {Following} from "../components/Following";
-import {Followers} from "../components/Followers";
+import Settings from "../components/Settings";
+import AuthPage from "../Pages/AuthPage";
+import About from "../components/About";
+import Posts from "../components/Posts";
+import Following from "../components/Following";
+import Followers from "../components/Followers";
 
-const UserInRouter = createBrowserRouter([
+const MainRouter = createBrowserRouter([
   {
     path: '/',
     element: <MainLayout />, // MainLayout as the layout
     children: [
       {
-        path: 'homepage',
+        index: true,
+        path: '/',
         element: <Homepage />
       },
       {
@@ -26,17 +27,26 @@ const UserInRouter = createBrowserRouter([
         element: <Chat />
       },
       {
+        index: true,
         path: 'liveflow',
-        element: <LiveFlow />
+        element: <LiveFlow />,
       },
       {
-        path: 'post',
+        path: `post/:postId`,
         element: <Post />
+      },
+      {
+        path: 'auth',
+        element: <AuthPage />
       },
       {
         path: 'profile',
         element: <Profile />,
         children: [
+          {
+            index: true,
+            element: <Posts />
+          },
           {
             path: 'settings',
             element: <Settings />
@@ -50,21 +60,13 @@ const UserInRouter = createBrowserRouter([
             element: <Following />
           },
           {
-            path: 'userpost',
-            element: <Posts />
-          },
-          {
             path: 'about',
             element: <About />
           }
         ]
-      },
-      {
-        path: 'auth',
-        element: <AuthPage />
-      },
+      }
     ]
   }
 ]);
 
-export default UserInRouter;
+export default MainRouter;

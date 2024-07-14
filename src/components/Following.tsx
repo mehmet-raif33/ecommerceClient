@@ -1,47 +1,52 @@
-
-
 import ProfileImage from '../Assets/images/profileImage.jpg'
-export const Following = () => {
+
+const Following = () => {
 
     const following = [
         {
           profilePicture: ProfileImage,
           username: 'jessica',
-          bio: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
         },
         {
           profilePicture: ProfileImage,
           username: 'jessica',
-          bio: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
         },
         {
           profilePicture: ProfileImage,
           username: 'jessica',
-          bio: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
         },
         {
           profilePicture: ProfileImage,
           username: 'jessica',
-          bio: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
         },
         {
           profilePicture: ProfileImage,
           username: 'jessica',
-          bio: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
         }
       ]
 
     return (
-        <div className="following-list hidden">
-          {following.map(user => (
-            <div key={Math.random()} className="user flex items-center p-4 border-b border-gray-200">
-              <img src={user.profilePicture} alt={user.username} className="w-12 h-12 rounded-full" />
-              <div className="ml-4">
-                <h2 className="text-lg font-bold">{user.username}</h2>
-                <p className="text-sm text-gray-600">{user.bio}</p>
-              </div>
+      <div className="container mx-auto p-4">
+      <h2 className="text-2xl font-semibold mb-4">Following</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+        { following.map((follower) => (
+          
+          <div className="bg-white p-4 rounded-lg shadow-lg flex items-center justify-between" >
+            <div className="ml-4 flex items-center">
+              <img src={follower.profilePicture} alt={follower.username} className="w-12 h-12 rounded-full mr-3" />
+              <p className="font-semibold text-lg">{follower.username}</p>
             </div>
-          ))}
-        </div>
+            <button className="bg-green-500 text-white py-1 px-3 rounded-lg">
+              Takip Et
+            </button>
+          </div>
+
+        ))}
+
+      </div>
+    </div>
     )
 }
+
+export default Following;

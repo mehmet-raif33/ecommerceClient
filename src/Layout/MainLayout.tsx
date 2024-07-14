@@ -1,24 +1,23 @@
 import { Navbar } from "../components/Navbar";
 import { Outlet } from "react-router-dom";
 import { Footer } from "../components/Footer";
-import { AnimatePresence , motion } from "framer-motion";
-
+import ScrollToTop from "../components/ScroolToTop";
 const MainLayout = () => {
 
   
+
   return (
     <div>
       <Navbar />
 
         <div className="flex justify-center bg-slate-300">
           
-          <AnimatePresence mode="wait">
-            <motion.div
-            className="w-[80%]"
-            >
-              <Outlet /> 
-            </motion.div>
-          </AnimatePresence>
+          <div
+          className="lg:w-[70%] md:w-[85%] sm:w-[100%]"
+          >
+            <ScrollToTop />
+            <Outlet />
+          </div>
         </div>
       
       <Footer />

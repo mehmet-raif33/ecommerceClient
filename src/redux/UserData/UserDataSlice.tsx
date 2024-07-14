@@ -14,10 +14,10 @@ const UserInfo = createSlice({
     name: 'UserInfo',
     initialState: initialData,
     reducers: {
-        login: (state) => {
+        login: () => {
 
         },
-        logout: (state) => {
+        logout: () => {
 
         }
     }

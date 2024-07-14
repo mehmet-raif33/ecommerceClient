@@ -17,7 +17,7 @@ import chatClicked from '../Assets/images/chatClicked.png'
 const LogInNavLinkList = [
   
   {
-    path: '/homepage',
+    path: '/',
     ActiveImageUrl: homepageClicked,
     PasifImageUrl: homepage
   },
@@ -64,7 +64,7 @@ export const Navbar = ( ) => {
   },[logData])
 
   return (
-    <nav className="flex justify-between w-full bg-sky-100 text-slate-200 h-16 text-lg sticky top-0">
+    <nav className="flex justify-between z-20 w-full bg-sky-100 text-slate-200 h-16 text-lg sticky top-0">
         
         <div className="mx-10 my-auto">
           <img className="h-[40px]" src={website_logo_background_removed} alt="sdf" />
