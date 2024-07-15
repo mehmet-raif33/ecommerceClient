@@ -12,7 +12,9 @@ export default {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       screens: {
-        'sm': '0px',
+        '2xsm': '0px',
+        // => @media (min-width: 640px) { ... }
+        'sm': '400px',
         // => @media (min-width: 640px) { ... }
   
         'md': '770px',
@@ -25,6 +27,8 @@ export default {
         // => @media (min-width: 1280px) { ... }
   
         '2xl': '1000px',
+        // => @media (min-width: 1536px) { ... }
+        '3xl': '1200px',
         // => @media (min-width: 1536px) { ... }
       }
     },

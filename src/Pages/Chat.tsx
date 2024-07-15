@@ -7,7 +7,7 @@ const Chat = () => {
   const [isContactsVisible, setIsContactsVisible] = useState(true);
 
   return (
-    <motion.div className="flex h-screen bg-gray-100">
+    <motion.div className="flex max-h-screen bg-gray-100">
       <AnimatePresence>
         {isContactsVisible ? (
           <motion.div
@@ -72,7 +72,7 @@ const Chat = () => {
       </AnimatePresence>
 
       <div className="flex-1 flex flex-col">
-        <div className="flex-1 p-4 overflow-y-auto">
+        <div className="flex-1 p-4">
           {/* Message from User 1 */}
           <div className="flex items-start mb-4">
             <img
@@ -106,18 +106,19 @@ const Chat = () => {
           </div>
 
           {/* Add more messages as needed */}
+          <div className="w-full relative bottom-0 right-0 left-0 bg-white p-3 z-10 flex items-center">
+            <input
+              type="text"
+              placeholder="Type your message..."
+              className="flex-grow p-2 border border-gray-300 rounded mr-3 outline-none"
+            />
+            <button className="bg-blue-500 text-white px-4 py-2 rounded-lg">
+              Send
+            </button>
+          </div>
         </div>
 
-        <div className="fixed bottom-0 w-full bg-white p-3 shadow-lg z-10 flex items-center">
-          <input
-            type="text"
-            placeholder="Type your message..."
-            className="flex-grow p-2 border border-gray-300 rounded mr-3 outline-none"
-          />
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-lg">
-            Send
-          </button>
-        </div>
+        
       </div>
     </motion.div>
   );
