@@ -10,7 +10,7 @@ const MainLayout = () => {
     <div className="">
       <Navbar />
 
-        <div className="flex justify-center bg-slate-300">
+        <div className="flex justify-center bg-slate-300 mb-20">
           
           <div
           className="lg:w-[70%] md:w-[85%] sm:w-[100%] md:mt-16"
