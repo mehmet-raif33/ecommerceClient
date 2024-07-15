@@ -11,9 +11,21 @@ export default {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
-      backgroundImage: {
-        'home': "url('./src/assets/images/HomeIcon.png')",
-        'homeIsClicked': "url('./src/assets/images/HomeIconIsClicked.png')",
+      screens: {
+        'sm': '0px',
+        // => @media (min-width: 640px) { ... }
+  
+        'md': '770px',
+        // => @media (min-width: 768px) { ... }
+  
+        'lg': '800px',
+        // => @media (min-width: 1024px) { ... }
+  
+        'xl': '900px',
+        // => @media (min-width: 1280px) { ... }
+  
+        '2xl': '1000px',
+        // => @media (min-width: 1536px) { ... }
       }
     },
   },

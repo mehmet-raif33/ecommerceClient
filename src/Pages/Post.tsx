@@ -11,8 +11,10 @@ const Post = (  ) => {
  
 
   return (
-    <div className="container bg-red-200 shadow-md rounded-md pb-96">
+    <div className="bg-red-200 shadow-md rounded-md pb-96">
+      
       <div className=' pl-4 justify-start items-center bg-slate-300'>
+        
         <div className=' cursor-pointer flex flex-row w-24 p-1 rounded-md  ' onClick={ () => navigate(-1) }>
           <img src={goBackIcon} alt='Get Back' className='w-8' />
           <h2 className='text-gray-700 font-semibold text-lg'>

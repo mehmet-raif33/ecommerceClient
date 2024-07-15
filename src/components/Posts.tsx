@@ -29,7 +29,7 @@ const Posts = () => {
     ]
 
     return (
-        <div className="mx-3 mb-2">
+        <div className="mb-2">
             {posts.map(post => (
                 <PostSingle key={Math.random()} postData={post} />
             ))}

@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navbar {
+    background-color: #3b82f6; /* Tailwind'deki bg-blue-500 rengi */
+    color: white;
+    padding: 1rem;
+    width: 100%;
+  }
+  
+  /* Sadece mobil cihazlar için */
+  @media (max-width: 768px) {
+    .navbar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 20;
+    }
+  }

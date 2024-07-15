@@ -3,7 +3,7 @@ import ProfileImage from '../Assets/images/profileImage.jpg'
 
 const Comment = () => {
   return (
-    <div className=" post-container flex justify-between items-center bg-slate-100 mb-2 p-4">
+    <div className=" post-container text-sm md:text-lg flex justify-between items-center bg-slate-100 mb-2 p-4">
         <div className="post-info flex items-center">
             <div className="voting-system flex flex-col items-center mr-4">
                 <button className="text-green-500">▲</button>
@@ -17,8 +17,8 @@ const Comment = () => {
         </div>
         <div className="post-author flex items-center">
             <div className="author-info flex flex-col items-end w-14 justify-center">
-                <img src={ProfileImage} alt='muratbenli' className="w-14 h-14 rounded-full" />
-                <span className="font-bold text-sm">Murat Benli</span>
+                <img src={ProfileImage} alt='muratbenli' className="w-12 h-12 md:w-14 md:h-14 rounded-full" />
+                <span className="font-bold text-center text-nowrap text-[13px] md:text-sm">Murat Benli</span>
             </div>
         </div>
     </div>

@@ -64,24 +64,26 @@ export const Navbar = ( ) => {
   },[logData])
 
   return (
-    <nav className="flex justify-between z-20 w-full bg-sky-100 text-slate-200 h-16 text-lg sticky top-0">
+    <nav 
+    className="flex justify-center items-center md:justify-between z-20 bg-sky-100 text-slate-200 md:h-16 h-20 text-lg fixed bottom-0 w-full md:top-0" 
+    >
         
-        <div className="mx-10 my-auto">
+        <div className="md:mx-10 md:my-auto md:block hidden">
           <img className="h-[40px]" src={website_logo_background_removed} alt="sdf" />
         </div>
 
-        <div className="mx-10 my-auto flex flex-row">
+        <div className="md:mx-10 w-full md:w-auto justify-around md:justify-center md:my-auto flex flex-row items-center">
           {
             logData ? 
             LogInNavLinkList.map((a) => (
               <NavLink
                 to={a.path}
                 key={Math.random()}
-                className={({ isActive }) => isActive ? 'active' : 'inactive'}
+                className={({ isActive }) => isActive ? ' active' : 'inactive'}
               >
                   {({ isActive }) => (
                     <img src={isActive ? a.ActiveImageUrl : a.PasifImageUrl} alt="About" 
-                    className="h-[40px] ml-3"
+                    className="md:h-[40px] h-[50px] ml-3"
                     />
                   )}
               </NavLink>
@@ -96,7 +98,7 @@ export const Navbar = ( ) => {
                   {({ isActive }) => (
                     <img 
                     src={isActive ? a.ActiveImageUrl : a.PasifImageUrl} alt="About" 
-                    className="h-[40px] ml-3"
+                    className="md:h-[40px] h-[50px] ml-3"
                     />
                   )}
               </NavLink>
