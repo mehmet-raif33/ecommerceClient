@@ -65,7 +65,7 @@ export const Navbar = ( ) => {
 
   return (
     <nav 
-    className="flex justify-center items-center md:justify-between z-20 bg-sky-100/50 bg-blur-md text-slate-200 md:h-16 h-14 text-lg fixed bottom-0 w-full md:top-0" 
+    className="flex justify-center items-center md:justify-between z-20 bg-sky-100 text-slate-200 md:h-16 h-14 text-lg fixed bottom-0 w-full md:top-0" 
     >
         
         <div className="md:mx-10 md:my-auto md:block hidden">
